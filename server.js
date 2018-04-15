@@ -1,7 +1,7 @@
 var io = require('socket.io').listen(3000)
 var pg = require ('pg')
 
-var con_string = 'tcp://realtime:realtimegogo!@45.32.59.138/realtime'
+var con_string = 'tcp://realtime:realtimegogo!@localhost/realtime'
 
 var pg_client = new pg.Client(con_string)
 pg_client.connect()
