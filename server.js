@@ -14,7 +14,7 @@ io.sockets.on('connection', function (socket) {
         pg_client.on('notification', function(title) {
             socket.emit('update', {
               today_date: date,
-              task_just_update: task_name,
+              task_just_updated: task_name,
               task_status: status,
               task_log: log,
               task_processed_time: time
