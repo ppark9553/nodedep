@@ -5,7 +5,7 @@ var con_string = 'tcp://arbiter:makeitpopweAR!1@45.32.59.138/arbiter'
 
 var pg_client = new pg.Client(con_string)
 pg_client.connect()
-var query = pg_client.query('LISTEN projectstate')
+var query = pg_client.query('LISTEN "projectstate"')
 
 io.sockets.on('connection', function (socket) {
     socket.emit('connected', { connected: true })
